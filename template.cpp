@@ -33,5 +33,11 @@ typedef long long ll;
 typedef long double ld;
 
 int main() {
-  
+  int t; s(t);
+  for (int _t=1; _t <= t; _t++) {
+    printf("Case #%d: ");
+    
+    
+    printf("\n");
+  }
 }
