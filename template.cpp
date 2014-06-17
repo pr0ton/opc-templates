@@ -19,6 +19,17 @@
 
 using namespace std;
 
+inline int sfast(int &x) {
+  x = 0;
+  char c = getchar_unlocked();
+  while (!('0' <= c && c <= '9')) c = getchar_unlocked();
+  while ('0' <= c && c <= '9') {
+    x = x * 10 + c - '0';
+    c = getchar_unlocked();
+  }
+  return x;
+}
+
 #define s(n)          scanf("%d",&n)
 #define sl(n)         scanf("%lld",&n)
 #define sf(n)         scanf("%lf",&n)
