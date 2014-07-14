@@ -34,9 +34,25 @@ using namespace std;
 #define pb(z)       push_back( z )
 #define gcd           __gcd
 
+bool isNum(char c) { return ('0' <= c && c <= '9'); }
+
+template<typename T>
+T read() {
+  T res = 0; char c, neg = 0;
+  do { c=getchar(); } while (!isNum(c) && c != '-');
+  if (c == '-') { neg = 1; c = getchar(); }
+  while (isNum(c)) { res = res * 10 + c-'0'; c = getchar(); }
+  return neg ? -res : res;
+}
+
 typedef unsigned long long ull;
 typedef long long ll;
 typedef long double ld;
 
+#define readInt read<int>
+#define readLL read<ll>
+
+
 int main() {
+  
 }
