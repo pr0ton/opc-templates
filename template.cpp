@@ -19,19 +19,14 @@
 
 using namespace std;
 
-inline int sfast(int &x) {
-  x = 0;
-  char c = getchar_unlocked();
-  while (!('0' <= c && c <= '9')) c = getchar_unlocked();
-  while ('0' <= c && c <= '9') {
-    x = x * 10 + c - '0';
-    c = getchar_unlocked();
-  }
-  return x;
-}
+#ifdef _WIN32
+#  define LLD "%I64d"
+#else
+#  define LLD "%lld"
+#endif
 
 #define s(n)          scanf("%d",&n)
-#define sl(n)         scanf("%lld",&n)
+#define sl(n)         scanf(LLD,&n)
 #define sf(n)         scanf("%lf",&n)
 #define fill(a,v)     memset(a, v, sizeof a)
 #define bitcount      __builtin_popcount
@@ -44,11 +39,4 @@ typedef long long ll;
 typedef long double ld;
 
 int main() {
-  int t; s(t);
-  for (int _t=1; _t <= t; _t++) {
-    printf("Case #%d: ");
-    
-    
-    printf("\n");
-  }
 }
