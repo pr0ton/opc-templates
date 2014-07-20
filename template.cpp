@@ -19,14 +19,6 @@
 
 using namespace std;
 
-#ifdef _WIN32
-#  define LLD "%I64d"
-#else
-#  define LLD "%lld"
-#endif
-
-#define s(n)          scanf("%d",&n)
-#define sl(n)         scanf(LLD,&n)
 #define sf(n)         scanf("%lf",&n)
 #define fill(a,v)     memset(a, v, sizeof a)
 #define bitcount      __builtin_popcount
@@ -35,10 +27,9 @@ using namespace std;
 #define gcd           __gcd
 
 bool isNum(char c) { return ('0' <= c && c <= '9'); }
-
 template<typename T>
-T read() {
-  T res = 0; char c, neg = 0;
+T read(T &res) {
+  res = 0; char c, neg = 0;
   do { c=getchar(); } while (!isNum(c) && c != '-');
   if (c == '-') { neg = 1; c = getchar(); }
   while (isNum(c)) { res = res * 10 + c-'0'; c = getchar(); }
